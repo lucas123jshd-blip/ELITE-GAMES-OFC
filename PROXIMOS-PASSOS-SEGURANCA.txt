@@ -1,0 +1,20 @@
+TOUCHLINE — CHECKLIST PARA LANÇAMENTO SEGURO
+
+JÁ PREPARADO NESTE PACOTE
+- Interface com alternância Português / English.
+- Capa da Atualização Outubro 26 também no destaque principal.
+- Rodapé de transparência sem selos falsos.
+- Páginas iniciais de privacidade e termos, em caráter de rascunho.
+- Carrinho continua apenas demonstrativo; não processa pagamentos.
+
+NÃO ESTÁ IMPLEMENTADO AINDA (NÃO ANUNCIAR COMO DISPONÍVEL)
+1. Backend/API para criar pedidos e validar preço e produto no servidor.
+2. Integração Mercado Pago para Pix/cartão e PayPal para clientes internacionais.
+3. Webhooks assinados, validação de assinatura, idempotência e consulta de status ao provedor.
+4. Armazenamento privado de arquivos (ex.: Cloudflare R2) e URLs temporárias emitidas só após pagamento confirmado.
+5. Proteções contra repetição de webhook, acesso indevido, abuso de download e exposição de chaves.
+6. Logs sem dados de cartão, gestão de segredos no servidor, backups e testes de ponta a ponta.
+7. Preencher identificação legal do vendedor, contato de suporte, política final de reembolso e retenção de dados.
+
+IMPORTANTE
+GitHub Pages é hospedagem estática: HTTPS protege o tráfego, mas não substitui backend, processamento de pagamento, confirmação server-side nem armazenamento privado. Não coloque chaves secretas ou arquivos pagos no repositório público.

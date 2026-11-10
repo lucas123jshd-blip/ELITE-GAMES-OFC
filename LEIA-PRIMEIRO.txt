@@ -1,0 +1,17 @@
+TOUCHLINE — PACOTE COM AS 3 CAPAS DOS PRODUTOS
+
+Este pacote atualiza os três cards da loja. Inclui index.html atualizado e as três imagens WebP dentro de assets/. Mantém também as imagens atuais da marca (logo e capa do canal).
+
+COMO APLICAR NO GITHUB
+1. Extraia este ZIP no computador.
+2. No repositório ELITE-GAMES-OFC, abra a pasta assets e use Add file > Upload files para enviar os três arquivos WebP que estão dentro de touchline-publico/assets/. Faça o upload para dentro de assets, junto de capa-elite-games.webp e logo-elite-games.webp.
+3. Volte à raiz do repositório. Use Add file > Upload files e envie o index.html que está dentro de touchline-publico/.
+4. Se o GitHub avisar que index.html já existe, confirme a substituição/commit. Não apague a pasta assets nem os arquivos de logo/capa já existentes.
+5. Aguarde o GitHub Pages atualizar e recarregue o site com Ctrl+F5.
+
+Arquivos novos em assets/:
+- fm-touch-21-pc-android.webp
+- atualizacao-outubro-26.webp
+- mod-legendes.webp
+
+O HTML mantém os nomes, descrições e preços do catálogo atual; apenas adiciona as imagens nos cards.
