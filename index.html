@@ -18,7 +18,11 @@
 <section class="help" id="ajuda"><article class="help-card"><h3 data-i18n="receiveTitle">Como você recebe?</h3><p data-i18n="receiveText">A entrega automática será ativada quando o checkout e o armazenamento privado estiverem configurados.</p></article><article class="help-card"><h3 data-i18n="safeTitle">Compre com segurança</h3><p data-i18n="safeText">Os arquivos devem ficar em armazenamento privado, nunca em pastas públicas. O acesso só deve ser liberado após confirmação do pagamento pelo servidor.</p></article></section></main>
 <section class="security" aria-labelledby="securityTitle"><h2 id="securityTitle" data-i18n="securityTitle">TRANSPARÊNCIA E SEGURANÇA</h2><div class="security-grid"><div class="security-item"><b data-i18n="httpsTitle">HTTPS ativo</b><span data-i18n="httpsText">Conexão criptografada pelo GitHub Pages.</span></div><div class="security-item"><b data-i18n="paymentTitle">Pagamentos</b><span data-i18n="paymentText">Checkout ainda não conectado. Nenhuma cobrança é processada por esta página.</span></div><div class="security-item"><b data-i18n="privacyTitle">Privacidade</b><span data-i18n="privacyText">Não informe dados de cartão nesta página. O formulário de pagamento ainda não existe.</span></div><div class="security-item"><b data-i18n="downloadTitle">Downloads</b><span data-i18n="downloadText">Entrega automática ainda não habilitada; arquivos pagos não devem ficar públicos.</span></div></div><div class="status-note" data-i18n="statusNote">IMPORTANTE: a loja está em preparação. Não finalize vendas até o checkout, a confirmação no servidor e os downloads privados estarem implementados e testados.</div><div class="policy-links"><a href="privacidade.html" data-i18n="privacyLink">Política de privacidade</a><a href="termos.html" data-i18n="termsLink">Termos de uso e reembolso</a><a href="#ajuda" data-i18n="supportLink">Suporte</a></div></section><footer class="footer"><span>© 2026 Touchline · Loja digital independente</span><span>FM Touch e marcas relacionadas pertencem aos seus respectivos titulares.</span></footer></div>
 <button class="mobile-cart" id="mobileCart"><span data-i18n="viewCart">VER CARRINHO</span> · <span id="mobileCount">0</span></button><div class="toast" id="toast" role="status" aria-live="polite"></div>
-<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><h2 id="modalTitle" data-i18n="cartTitle">Seu carrinho</h2><p class="hint" data-i18n="cartHint">Confira os produtos e escolha a moeda.</p></div><button class="close" id="close" aria-label="Fechar">×</button></div><div class="items" id="items"></div><div class="currency"><span data-i18n="payIn">Pagar em:</span> <label><input type="radio" name="currency" value="BRL" checked> Pix · BRL</label><label><input type="radio" name="currency" value="EUR"> PayPal · EUR</label></div><div class="total"><span>Total</span><span id="total">R$ 0,00</span></div><button class="pay pix" id="pix" data-i18n="continuePix">Continuar com Pix</button><button class="pay" id="paypal" data-i18n="continuePaypal">Continuar com PayPal</button><div class="notice" data-i18n="checkoutNotice">Checkout ainda não conectado. Os botões de pagamento estão em modo de preparação. Nunca coloque chaves secretas ou links privados de arquivos neste HTML.</div></div></div>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><h2 id="modalTitle" data-i18n="cartTitle">Seu carrinho</h2><p class="hint" data-i18n="cartHint">Confira os produtos e escolha a moeda.</p></div><button class="close" id="close" aria-label="Fechar">×</button></div><div class="items" id="items"></div><div class="currency"><span data-i18n="payIn">Pagar em:</span> <label><input type="radio" name="currency" value="BRL" checked> Pix · BRL</label><label><input type="radio" name="currency" value="EUR"> PayPal · EUR</label></div><div class="total"><span>Total</span><span id="total">R$ 0,00</span></div><div style="margin:14px 0">
+<label for="buyerEmail" style="display:block;font-size:11px;color:#b7c4d2;margin-bottom:7px">E-mail para identificação do pedido</label>
+<input id="buyerEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required style="width:100%;padding:13px;border-radius:10px;border:1px solid #526174;background:#0c121c;color:white;font:inherit">
+</div>
+<button class="pay pix" id="pix" data-i18n="continuePix">Continuar com Pix</button><button class="pay" id="paypal" data-i18n="continuePaypal">Continuar com PayPal</button><div class="notice" data-i18n="checkoutNotice">Checkout ainda não conectado. Os botões de pagamento estão em modo de preparação. Nunca coloque chaves secretas ou links privados de arquivos neste HTML.</div></div></div>
 <script>
 const translations={
 pt:{navCatalog:"Catálogo",navHelp:"Ajuda",cart:"CARRINHO",eyebrow:"Sua central de conteúdo FM Touch",headline:'O próximo nível da sua <span>temporada.</span>',intro:"Jogo original, atualizações de temporada e conteúdos especiais para FM Touch. Escolha seu arquivo, confira a compatibilidade e prepare seu save.",explore:"EXPLORAR CATÁLOGO ↘",howReceive:"COMO RECEBER",brazil:"Brasil",international:"Internacional",download:"DOWNLOAD",digitalDelivery:"Entrega digital",featured:"EM DESTAQUE · ATUALIZAÇÃO",availableFor:"DISPONÍVEL PARA",startingAt:"A PARTIR DE",library:"A biblioteca Touchline",catalogTitle:"Escolha seu próximo save.",catalogDesc:"Selecione um produto para adicionar ao carrinho.",all:"TODOS",gameFilter:"JOGO ORIGINAL",updatesFilter:"ATUALIZAÇÕES",receiveTitle:"Como você recebe?",receiveText:"Após a confirmação do pagamento, o sistema poderá liberar automaticamente o download do arquivo comprado. A entrega automática será ativada quando o checkout e o armazenamento privado estiverem configurados.",safeTitle:"Compre com segurança",safeText:"Os arquivos devem ficar em armazenamento privado, nunca em pastas públicas. O acesso só deve ser liberado após confirmação do pagamento pelo servidor. Confira sempre a versão e a plataforma antes de comprar.",securityTitle:"TRANSPARÊNCIA E SEGURANÇA",httpsTitle:"HTTPS ativo",httpsText:"Conexão criptografada pelo GitHub Pages.",paymentTitle:"Pagamentos",paymentText:"Checkout ainda não conectado. Nenhuma cobrança é processada por esta página.",privacyTitle:"Privacidade",privacyText:"Não informe dados de cartão nesta página. O formulário de pagamento ainda não existe.",downloadTitle:"Downloads",downloadText:"Entrega automática ainda não habilitada; arquivos pagos não devem ficar públicos.",statusNote:"IMPORTANTE: a loja está em preparação. Não finalize vendas até o checkout, a confirmação no servidor e os downloads privados estarem implementados e testados.",privacyLink:"Política de privacidade",termsLink:"Termos de uso e reembolso",supportLink:"Suporte",cartTitle:"Seu carrinho",cartHint:"Confira os produtos e escolha a moeda.",payIn:"Pagar em:",continuePix:"Continuar com Pix",continuePaypal:"Continuar com PayPal",checkoutNotice:"Checkout ainda não conectado. Os botões de pagamento estão em modo de preparação. Nunca coloque chaves secretas ou links privados de arquivos neste HTML.",viewCart:"VER CARRINHO",add:"ADICIONAR +",already:"Esse produto já está no carrinho.",added:"adicionado ao carrinho.",empty:"Seu carrinho está vazio. Adicione um produto do catálogo.",pixPending:"Pix ainda não conectado. Nenhuma cobrança foi criada.",paypalPending:"PayPal ainda não conectado. Nenhuma cobrança foi criada.",productKind:["ATUALIZAÇÃO","JOGO ORIGINAL","ATUALIZAÇÃO"],productTitle:["Atualização Outubro 26","FM Touch — Jogo Original","Atualização Legends"],productDesc:["Atualização para FM Touch 21 em dispositivo Android.","Jogo original para PC e Android. Confira os requisitos e a plataforma do seu dispositivo antes da compra.","Conteúdo Legends para FM Touch. A versão e a plataforma compatíveis devem ser confirmadas antes da compra."]},
@@ -44,6 +48,41 @@ function updateCount(){document.getElementById('count').textContent=cart.length;
 function currency(){return document.querySelector('input[name="currency"]:checked').value}
 function openCart(){document.getElementById('overlay').classList.add('open');const c=currency(),list=document.getElementById('items');list.innerHTML=cart.length?cart.map(p=>`<div class="lineitem"><span>${p.title}</span><strong>${c==='BRL'?brl(p.brl):eur(p.eur)}</strong></div>`).join(''):`<div class="empty">${t('empty')}</div>`;document.getElementById('total').textContent=c==='BRL'?brl(cart.reduce((n,p)=>n+p.brl,0)):eur(cart.reduce((n,p)=>n+p.eur,0));document.getElementById('pix').disabled=!cart.length;document.getElementById('paypal').disabled=!cart.length}
 document.getElementById('cartOpen').onclick=openCart;document.getElementById('mobileCart').onclick=openCart;document.getElementById('close').onclick=()=>document.getElementById('overlay').classList.remove('open');document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')e.currentTarget.classList.remove('open')});document.querySelectorAll('input[name="currency"]').forEach(r=>r.addEventListener('change',openCart));
-// Não simula aprovação: sem integração de servidor, pagamento não pode ser iniciado.
-document.getElementById('pix').onclick=()=>toast(t('pixPending'));document.getElementById('paypal').onclick=()=>toast(t('paypalPending'));applyLanguage();document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('overlay').classList.remove('open')});
+// Checkout Pix conectado ao Worker. A confirmação do pagamento ainda depende de webhook.
+const API_URL = "https://touchline-api.lucasnascimentodelima12.workers.dev";
+document.getElementById('pix').onclick = async () => {
+  if (!cart.length) {
+    toast(t('empty'));
+    return;
+  }
+  if (currency() !== 'BRL') {
+    toast(language === 'pt' ? 'Selecione Pix · BRL para continuar.' : 'Select Pix · BRL to continue.');
+    return;
+  }
+  const email = document.getElementById('buyerEmail').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    toast(language === 'pt' ? 'Informe um e-mail válido.' : 'Enter a valid email address.');
+    document.getElementById('buyerEmail').focus();
+    return;
+  }
+  const button = document.getElementById('pix');
+  button.disabled = true;
+  button.textContent = language === 'pt' ? 'CONECTANDO...' : 'CONNECTING...';
+  try {
+    const result = await fetch(`${API_URL}/api/create-order`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ productIds: cart.map(product => product.id), email })
+    });
+    const data = await result.json();
+    if (!result.ok) throw new Error(data.error || 'Não foi possível criar o pedido.');
+    if (!data.checkout_url) throw new Error('O link de pagamento não foi retornado.');
+    window.location.assign(data.checkout_url);
+  } catch (error) {
+    toast(error.message || 'Erro ao conectar ao pagamento.');
+    button.disabled = false;
+    button.textContent = t('continuePix');
+  }
+};
+document.getElementById('paypal').onclick=()=>toast(t('paypalPending'));applyLanguage();document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('overlay').classList.remove('open')});
 </script></body></html>
